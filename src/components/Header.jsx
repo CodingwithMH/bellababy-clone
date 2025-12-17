@@ -11,9 +11,9 @@ export default function Header() {
       <div className="bg-white py-8 px-12">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link to={'/'} className="flex items-center gap-2">
             <img src="https://www.bellababy.co.uk/static/version1764159769/frontend/Bellababy/hyva-base/en_GB/images/logo.svg" alt="Logo" />
-          </div>
+          </Link>
 
           {/* Search Bar */}
           <div className="flex-1 mx-3">
@@ -47,57 +47,57 @@ export default function Header() {
         <div className="max-w-7xl mx-auto">
           <ul className="flex items-center justify-between text-sm text-gray-700">
             <li>
-              <Link to="/category/pushchairs" className="hover:text-orange-400">
+              <Link to="/category/pushchairs" className="hover:text-orange-400 pb-4 hover:border-b-2 hover:border-b-gray-800">
                 Pushchairs
               </Link>
             </li>
             <li>
-              <Link to="/category/car_seats" className="hover:text-orange-400">
+              <Link to="/category/car_seats" className="hover:text-orange-400 pb-4 hover:border-b-2 hover:border-b-gray-800">
                 Car Seats
               </Link>
             </li>
             <li>
-              <Link to="/category/feeding" className="hover:text-orange-400">
+              <Link to="/category/feeding" className="hover:text-orange-400 pb-4 hover:border-b-2 hover:border-b-gray-800">
                 Feeding
               </Link>
             </li>
             <li>
-              <Link to="/category/sitting" className="hover:text-orange-400">
+              <Link to="/category/sitting" className="hover:text-orange-400 pb-4 hover:border-b-2 hover:border-b-gray-800">
                 Sitting
               </Link>
             </li>
             <li>
-              <Link to="/category/boutique" className="hover:text-orange-400">
+              <Link to="/category/boutique" className="hover:text-orange-400 pb-4 hover:border-b-2 hover:border-b-gray-800">
                 Boutique
               </Link>
             </li>
             <li>
-              <Link to="/category/nursery" className="hover:text-orange-400">
+              <Link to="/category/nursery" className="hover:text-orange-400 pb-4 hover:border-b-2 hover:border-b-gray-800">
                 Nursery
               </Link>
             </li>
             <li>
-              <Link to="/category/hygiene" className="hover:text-orange-400">
+              <Link to="/category/hygiene" className="hover:text-orange-400 pb-4 hover:border-b-2 hover:border-b-gray-800">
                 Hygiene
               </Link>
             </li>
             <li>
-              <Link to="/category/travel" className="hover:text-orange-400">
+              <Link to="/category/travel" className="hover:text-orange-400 pb-4 hover:border-b-2 hover:border-b-gray-800">
                 Travel
               </Link>
             </li>
             <li>
-              <Link to="/category/gifts" className="hover:text-orange-400">
+              <Link to="/category/gifts" className="hover:text-orange-400 pb-4 hover:border-b-2 hover:border-b-gray-800">
                 Gifts
               </Link>
             </li>
             <li>
-              <Link to="/category/brand" className="hover:text-orange-400">
+              <Link to="/category/brand" className="hover:text-orange-400 pb-4 hover:border-b-2 hover:border-b-gray-800">
                 Brands
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="hover:text-orange-400">
+              <Link to="/blog" className="hover:text-orange-400 pb-4 hover:border-b-2 hover:border-b-gray-800">
                 Blog
               </Link>
             </li>

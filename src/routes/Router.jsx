@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom"
 import App from "../App"
-import Shop from "../pages/ShopCategory"
+import ShopCategory from "../pages/ShopCategory"
 import LandingPage from "../pages/LandingPage"
+import CategoryProduct from "../pages/CategoryProduct"
 
 const router = createBrowserRouter(
   [
@@ -15,8 +16,12 @@ const router = createBrowserRouter(
         },
         {
           path:"/category/:categoryName",
-          element:<Shop/>
-        }
+          element:<ShopCategory/>
+        },
+        {
+          path:"/product/:productName",
+          element:<CategoryProduct/>
+        },
       ]
     }
   ]

@@ -1,26 +1,29 @@
 import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 const ProductCard = ({ product }) => {
   return (
     <>
-      <div className="rounded-lg hover:shadow-lg transition-shadow">
+      <Link to={`/product/${product.name.replaceAll(' ','-')}`} className="block rounded-lg hover:shadow-lg transition-shadow">
         <div className="relative mb-4">
           <img
-            src={product.image || "/placeholder.svg"}
+            src={product.image}
             alt={product.name}
-            className="w-full h-64 object-cover rounded"
+            height={"240"}
+            width={"240"}
+            className="w-full object-cover rounded"
           />
           <span
-            className={`absolute bottom-2 left-2 ${product.badgeColor} text-white text-xs px-2 py-1 rounded`}
+            className={`absolute bottom-2 left-2 ${product.outOfStock!==true ? 'bg-yellow-400' : 'bg-gray-400'} text-white text-xs px-2 py-1 rounded`}
           >
-            {product.badge}
+            {product.outOfStock!==true ? 'In Stock' : 'Out of Stock'}
           </span>
-          <button className="absolute bottom-2 right-2 bg-white/80 hover:bg-white">
+          <button className="absolute bottom-2 right-2">
             <Heart className="w-5 h-5" />
           </button>
         </div>
         <h3 className="mb-2 line-clamp-2">{product.name}</h3>
         <p className="font-bold text-lg text-gray-500">{product.price}</p>
-      </div>
+      </Link>
     </>
   );
 };
