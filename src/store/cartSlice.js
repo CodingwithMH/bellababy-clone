@@ -15,11 +15,16 @@ const cartSlice = createSlice({
     addProduct(state,action){
       const product = action.payload;
       const exist = state.products.find((prod)=>prod._id===product._id);
-      if (exist && product.stock > product.quantity) {
-        exist.quantity+=quantity;
+      console.log('first hello',exist)
+      if (exist ) {
+        if (exist.quantity < exist.stock) {
+          exist.quantity+=1;
+          recalculateTotal(state);
+        }
+      }else{
+        state.products.push({...product,quantity:1});
+        recalculateTotal(state);
       }
-      state.products.push({...product,quantity:1});
-      recalculateTotal(state);
     },
     decreaseQuantity(state,action){
       const {id} = action.payload;

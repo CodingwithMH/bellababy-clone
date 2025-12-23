@@ -8,12 +8,12 @@ const ProductDetails = ({product}) => {
   return (
     <>
      <div>
-            <h1 className="text-3xl font-bold mb-2">Tripp Trapp® Tray - Grey</h1>
+            <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
             <p className="text-sm text-muted-foreground mb-6">
               by <span className="underline cursor-pointer">Stokke - Tripp Trapp</span>
             </p>
 
-            <div className="text-3xl font-bold mb-6">£63.00</div>
+            <div className="text-3xl font-bold mb-6">£{product.price.toFixed(2)}</div>
 
             <button onClick={()=>dispatch(addProduct(product))} className="w-full h-12 bg-[#FFA500] rounded-full hover:bg-[#FF8C00] text-white font-semibold mb-3">
               ADD TO CART
